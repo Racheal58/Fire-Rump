@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <H1>Fire Rump<H1>
-=======
-Fire Rump
->>>>>>> 61aa01518be4cbcb18fbbacd03445e4604176196
 
 A 2D platformer game where you have to dodge fall fire balls to survive.
 The game gets harder the longer you stay in 
