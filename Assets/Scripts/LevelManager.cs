@@ -10,14 +10,17 @@ public class LevelManager : MonoBehaviour {
     [SerializeField]
     private GameObject losePanel;
     private PlayerControl player;
-
+    public AudioSource sound;
     private void Awake() {
         //Find the loose panel automatically and turn it off at start of game
         losePanel = GameObject.Find("Lose Panel");
         losePanel.SetActive(false);
+        //Search game object for the sound
+        sound = GetComponent<AudioSource>();
     }
     void Start() {
         player = FindObjectOfType<PlayerControl>(); //Find player in the scene
+        sound.Play();
         Time.timeScale = 1; //Set the time to normal time 
     }
 
@@ -31,6 +34,7 @@ public class LevelManager : MonoBehaviour {
         //set turns the lose panel on and pause time progressionw
         losePanel.SetActive(true);
         Time.timeScale = 0;
+        sound.Stop();
     }
     public void LoadScene(string name) {
         //Load the scene with inputed name
