@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class Shredder : MonoBehaviour {
     public Animator camAnim;
-    public bool hitFloor;
-
-    private void Start() {
-
-    }
     private void OnCollisionEnter2D(Collision2D other) {
+        //Checks if the rock hits the floor in order to destroy the rock gameobject after a specified time.
         if (other.gameObject.CompareTag("Rock")) {
+            //sets the trigger for the camera to shake animation
             camAnim.SetTrigger("Shake");
-            hitFloor = true;
-            other.gameObject.GetComponent<Animator>().SetBool("hitFloor", hitFloor);
+            //Plays the explosion sound associated with the rock
             other.gameObject.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject, 0.1f);
         }

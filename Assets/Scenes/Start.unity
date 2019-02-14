@@ -699,7 +699,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1.1
   m_Text: "Credits: Jakob Fischer for the flaming font, @DavitMasia and @CodeManuPro
-    for the falling flames, \n@Ollieberzs for the engineer character, "
+    for the falling flames, \n@Ollieberzs for the engineer character, @Ayomodu for
+    the looped sound"
 --- !u!222 &823646046
 CanvasRenderer:
   m_ObjectHideFlags: 0
